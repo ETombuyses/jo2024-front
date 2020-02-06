@@ -1,13 +1,16 @@
 import React from 'react';
 import basketball from '../assets/img/Basketball.svg';
-import ChosenSport from '../Components/ChosenSport';
+import Sport from '../Components/Sport';
+import FauteuilRoulant from '../assets/img/FauteuilRoulant.svg';
+import HandicapSensoriel from '../assets/img/HandicapSensoriel.svg'
 
 class Popup extends React.Component {
     constructor() {
       super();
       this.state = {
           arrondissement: "1er Arrondissement",
-          chosenSport: "Basketball",
+          Sport: "Basketball",
+          CategorieChoisie: "Sport de ballons :"
 
 
 
@@ -23,8 +26,36 @@ class Popup extends React.Component {
           <p className="currentOlympicDescription">Epreuve olympique<br/>
             BasketBall - Olympia de Paris</p>
         </div>
-        <h2 className="buildingsHead">Etablissements pour la pratique choisie : </h2>
-        <ChosenSport></ChosenSport>
+        <div className="buildingsSection">
+          <h2 className="buildingsHead">{this.state.CategorieChoisie}</h2>
+          <Sport name="Basketball" amount="40"></Sport>
+          <Sport name="Football" amount="30"></Sport>
+          <h3 className="otherSportsHead">Autres sports :</h3>
+          <Sport name="Jogging" amount="20"></Sport>
+          <Sport name="Skateboard" amount="48"></Sport>
+          <Sport name="Tennis" amount="8"></Sport>
+        </div>
+        <div className="filtersSection">
+            <h3>Filtrer les résultats</h3>
+            <div className="filtersSectionWrapper">
+              <div className="accesibilityFilters">
+                <h4>Accéssibilité</h4>
+                <div className="accesibilityFiltersWrapper">
+                  <div>
+                    <img src={FauteuilRoulant} alt="Mobilité Réduite"/>
+                    <h5>Mobilité réduite</h5>
+                  </div>
+                  <div>
+                    <img src={HandicapSensoriel} alt="Handicap Sensoriel"/>
+                    <h5>Handicap Sensoriel</h5>
+                  </div>
+                </div>
+              </div>
+              <div className="typeOfSportsFilters">
+
+              </div>
+            </div>
+        </div>
       </div>
     }
   }

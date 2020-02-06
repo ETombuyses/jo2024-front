@@ -10,6 +10,7 @@ body {
   height: 84vh;
   border-radius: 10px;
   background-color: white;
+  overflow:hidden;
 }
 
 .Arrondissement {
@@ -55,6 +56,11 @@ body {
   margin-left: 4%;
 }
 
+.buildingsSection {
+  overflow-y: auto;
+  height: 60%;
+}
+
 .buildingsHead{
   margin-top: 20px;
   font-weight: bold;
@@ -69,7 +75,7 @@ body {
 }
 
 .favoriteSportIconAndTitleWrapper{
-  width: fit-content;
+  width: 70px;
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -77,8 +83,15 @@ body {
   font-size: 14px;
 }
 
+.favoriteSportIcon{
+  width: 70px;
+  height: 41px;
+}
+
 .favoriteSportIconAndTitleWrapper span{
   margin-top: 10px;
+  text-align: center;
+  width: 70px;
 }
 
 .Gauge {
@@ -88,10 +101,69 @@ body {
   margin-left: 30px;
 }
 
+.GaugeValue{
+  margin-right: 20px;
+}
+
 .GaugeValueWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 41px;
   font-weight: bold;
+}
+
+.otherSportsHead{
+  margin-left: 30px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.filtersSection{
+  width: 100%;
+  background-color: rgb(169, 211, 243);
+  height: 16vh;
+  overflow-y: hidden;
+}
+
+.filtersSection h3{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.filtersSectionWrapper{
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 70%;
+}
+
+.accesibilityFilters{
+  width: 40%;
+  height: auto;
+}
+
+.accesibilityFilters h4{
+  text-decoration: underline;
+  text-align: center;
+}
+
+.typeOfSportsFilters{
+  background-color: red;
+  width: 40%;
+  height: auto;
+}
+
+.accesibilityFiltersWrapper{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+
+}
+
+.accesibilityFiltersWrapper div{
+  text-align: center;
 }
