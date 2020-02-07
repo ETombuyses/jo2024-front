@@ -9,9 +9,9 @@ class Sport extends React.Component {
     }
     }
     render() {
-      return <div className="favoriteSportWrapper">
-                <div className="favoriteSportIconAndTitleWrapper">
-                    <img src={basketball} alt="" className="favoriteSportIcon"/>
+      return <div className="SportWrapper">
+                <div className="SportIconAndTitleWrapper">
+                    <img src={basketball} alt="" className="SportIcon"/>
                     <span>{this.props.name}</span>
                 </div>
                 <div className="Gauge"></div>

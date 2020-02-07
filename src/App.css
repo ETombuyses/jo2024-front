@@ -69,13 +69,13 @@ body {
 
 }
 
-.favoriteSportWrapper {
+.SportWrapper {
   margin-top: 15px;
   display: flex;
 
 }
 
-.favoriteSportIconAndTitleWrapper {
+.SportIconAndTitleWrapper {
   width: 70px;
   margin-left: 30px;
   display: flex;
@@ -84,12 +84,12 @@ body {
   font-size: 14px;
 }
 
-.favoriteSportIcon {
+.SportIcon {
   width: 70px;
   height: 41px;
 }
 
-.favoriteSportIconAndTitleWrapper span {
+.SportIconAndTitleWrapper span {
   margin-top: 10px;
   text-align: center;
   width: 70px;
@@ -119,6 +119,12 @@ body {
   margin-top: 25px;
   font-weight: bold;
 }
+
+
+
+/* FILTRES */
+
+
 
 .filtersSection {
   width: 100%;
