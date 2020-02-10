@@ -3,6 +3,10 @@ body {
   /* REMOVE THIS */
 }
 
+.forreturn{
+  height:100%;
+}
+
 .popup {
   position: absolute;
   top: 8vh;
@@ -216,4 +220,23 @@ body {
   width: 100%;
   display: flex;
   margin-top: 20px;
+}
+
+
+/* 2EME PARTIE POPUP */
+
+.selectedSport{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.selectedSport h3{
+  margin-top: 5px;
+}
+
+.adressWrapper{
+  margin-left: 30px;
+  margin-top: 15px;
 }
