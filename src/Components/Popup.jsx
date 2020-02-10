@@ -18,9 +18,12 @@ class Popup extends React.Component {
   }
 
   switchDisplay(){
+    if (this.state.SportChoisi === true) {
+      this.setState({SportChoisi: false})
+    }else{
     this.setState({SportChoisi: true});
-    console.log(this.state.SportChoisie)
    }
+  }
 
   displaySportsOrPlaces() {
     if (this.state.SportChoisi === false) {
@@ -51,6 +54,7 @@ class Popup extends React.Component {
     } else {
       return (
         <div className="forreturn">
+          <span className="return" onClick={()=>{{this.switchDisplay()}}}>Retour</span>
           <div className="selectedSport">
             <img src={basketball} alt=""/>
             <h3>{this.state.ClickedSport}</h3>

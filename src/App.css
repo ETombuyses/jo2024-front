@@ -63,14 +63,10 @@ body {
 
 .buildingsSection {
   overflow-y: auto;
+  width: 100%;
   height: 40%;
 }
 
-@media(min-width: 1920px){
-  .buildingsSection{
-    height: 62%;
-  }
-}
 
 .buildingsHead {
   margin-top: 20px;
@@ -239,4 +235,15 @@ body {
 .adressWrapper{
   margin-left: 30px;
   margin-top: 15px;
+}
+
+.return{
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.return::before{
+  content: "< ";
 }
