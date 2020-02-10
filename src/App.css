@@ -33,7 +33,7 @@ body {
 
 .currentOlympicWrapper {
   display: flex;
-  margin-top: 50px;
+  margin-top: 5%;
 
 }
 
@@ -59,7 +59,13 @@ body {
 
 .buildingsSection {
   overflow-y: auto;
-  height: 60%;
+  height: 40%;
+}
+
+@media(min-width: 1920px){
+  .buildingsSection{
+    height: 62%;
+  }
 }
 
 .buildingsHead {
@@ -99,7 +105,7 @@ body {
   width: 60%;
   height: 41px;
   background: linear-gradient(90deg, red 40%, white 40%, white 60%);
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .GaugeValue {
@@ -129,8 +135,11 @@ body {
 .filtersSection {
   width: 100%;
   background-color: rgb(169, 211, 243);
-  height: 16vh;
+  height: 35%;
   overflow-y: hidden;
+  font-size: 16px;
+  position: absolute;
+  top: 65%;
 }
 
 .filtersSection h3 {
@@ -139,8 +148,15 @@ body {
   margin-top: 5px;
 }
 
+.filterSectionWrapperWrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .filtersSectionWrapper {
-  margin-top: 2%;
+  margin-top: 5%;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -149,7 +165,6 @@ body {
 
 .accesibilityFilters {
   width: 40%;
-  height: auto;
 }
 
 .accesibilityFilters h4 {
@@ -183,6 +198,8 @@ body {
   padding: 5px;
   border: none;
   margin-left: 10px;
+  background-color: black;
+  color: white;
 }
 
 .typeOfSportsFilters h4 {
