@@ -10,9 +10,28 @@ class Popup extends React.Component {
     this.state = {
       arrondissement: "1er Arrondissement",
       Sport: "Basketball",
-      CategorieChoisie: "Sport de ballons :"
+      CategorieChoisie: "Sport de ballons :",
+      SportChoisi: false
     };
   }
+  displaySportsOrPlaces() {
+    if (this.state.SportChoisi === false) {
+      return (
+        <div className="buildingsSection">
+          <h2 className="buildingsHead">{this.state.CategorieChoisie}</h2>
+          <Sport name="Basketball" amount="40"></Sport>
+          <Sport name="Football" amount="30"></Sport>
+          <h3 className="otherSportsHead">Autres sports :</h3>
+          <Sport name="Jogging" amount="20"></Sport>
+          <Sport name="Skateboard" amount="48"></Sport>
+          <Sport name="Tennis" amount="8"></Sport>
+          <Sport name="Saut en longueur" amount="1"></Sport>
+        </div>
+      );
+    } else {
+    }
+  }
+
   render() {
     return (
       <div className="popup">
@@ -31,15 +50,9 @@ class Popup extends React.Component {
             BasketBall - Olympia de Paris
           </p>
         </div>
-        <div className="buildingsSection">
-          <h2 className="buildingsHead">{this.state.CategorieChoisie}</h2>
-          <Sport name="Basketball" amount="40"></Sport>
-          <Sport name="Football" amount="30"></Sport>
-          <h3 className="otherSportsHead">Autres sports :</h3>
-          <Sport name="Jogging" amount="20"></Sport>
-          <Sport name="Skateboard" amount="48"></Sport>
-          <Sport name="Tennis" amount="8"></Sport>
-        </div>
+
+        {this.displaySportsOrPlaces()}
+
         <div className="filtersSection">
           <h3>Filtrer les résultats</h3>
           <div className="filtersSectionWrapper">
