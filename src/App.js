@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './Popup.css';
+import './Landing.css';
 import Popup from './Components/Popup'
+import Landing from './Components/Landing'
 
 function App() {
   return (
     <div className="App">
-      <Popup></Popup>
+      <Landing></Landing>
     </div>
   );
 }

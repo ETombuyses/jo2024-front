@@ -1,7 +1,3 @@
-body {
-  background-color: #E1E9F4;
-  /* REMOVE THIS */
-}
 
 .forreturn{
   height:100%;
@@ -16,9 +12,10 @@ body {
   border-radius: 10px;
   background-color: white;
   overflow: hidden;
+  border: 1px solid black;
 }
 
-.Arrondissement {
+/*.Arrondissement {
   text-align: center;
   margin-top: 25px;
   font-weight: bold;
@@ -34,6 +31,7 @@ body {
   content: "<  ";
   cursor: pointer;
 }
+*/
 
 .currentOlympicWrapper {
   display: flex;
@@ -64,9 +62,8 @@ body {
 .buildingsSection {
   overflow-y: auto;
   width: 100%;
-  height: 40%;
+  height: 70%;
 }
-
 
 .buildingsHead {
   margin-top: 20px;
@@ -129,17 +126,18 @@ body {
 
 
 /* FILTRES */
-
+/*
 
 
 .filtersSection {
   width: 100%;
   background-color: rgb(169, 211, 243);
-  height: 35%;
+  height: 30%;
   overflow-y: hidden;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
-  top: 65%;
+  top: 70%;
+  border-radius: 10px;
 }
 
 .filtersSection h3 {
@@ -156,7 +154,6 @@ body {
 }
 
 .filtersSectionWrapper {
-  margin-top: 5%;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -181,7 +178,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 15px; 
 
 }
 
@@ -218,6 +215,7 @@ body {
   margin-top: 20px;
 }
 
+*/
 
 /* 2EME PARTIE POPUP */
 

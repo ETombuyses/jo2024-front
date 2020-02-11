@@ -1,9 +1,8 @@
 import React from "react";
 import basketball from "../assets/img/Basketball.svg";
 import Sport from "../Components/Sport";
-
 import Adress from "../Components/Adress";
-import Filters from "../Components/Filters";
+/*import Filters from "../Components/Filters";*/
 
 class Popup extends React.Component {
   constructor() {
@@ -11,7 +10,7 @@ class Popup extends React.Component {
     this.state = {
       arrondissement: "1er Arrondissement",
       Sport: "Basketball",
-      CategorieChoisie: "Sport de ballons :",
+      CategorieChoisie: "Sport de ballons",
       SportChoisi: false,
       ClickedSport: "Basketball"
     };
@@ -40,7 +39,7 @@ class Popup extends React.Component {
             </p>
           </div>
           <div className="buildingsSection">
-            <h2 className="buildingsHead">{this.state.CategorieChoisie}</h2>
+            <h2 className="buildingsHead">{this.state.CategorieChoisie} :</h2>
             <Sport name="Basketball" amount="40" onClick={()=>{{this.switchDisplay()}}} ></Sport>
             <Sport name="Football" amount="30" onClick={()=>{{this.switchDisplay()}}}></Sport>
             <h3 className="otherSportsHead">Autres sports :</h3>
@@ -72,11 +71,10 @@ class Popup extends React.Component {
   render() {
     return (
       <div className="popup">
-        <p className="Arrondissement">{this.state.arrondissement}</p>
+        {/*<p className="Arrondissement">{this.state.arrondissement}</p>*/}
 
         {this.displaySportsOrPlaces()}
 
-        <Filters></Filters>
       </div>
     );
   }
