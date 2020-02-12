@@ -12,14 +12,7 @@ class Sport extends React.Component {
     
     render() {
       return <div className="SportWrapper" onClick={this.props.onClick}>
-                <div className="SportIconAndTitleWrapper">
-                    <img src={basketball} alt="" className="SportIcon"/>
-                    <span>{this.props.name}</span>
-                </div>
-                <div className="Gauge"></div>
-                <div className="GaugeValueWrapper">
-                    <span className="GaugeValue">{this.props.amount}</span>
-                </div>
+                
              </div>
     }
   }
