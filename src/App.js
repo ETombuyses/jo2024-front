@@ -1,13 +1,12 @@
 import React from 'react';
 import './Popup.css';
 import './Landing.css';
-import Popup from './Components/Popup'
-import Landing from './Components/Landing'
+import MyApp from './Components/MyApp'
 
 function App() {
   return (
     <div className="App">
-      <Landing></Landing>
+      <MyApp></MyApp>
     </div>
   );
 }

@@ -12,7 +12,8 @@ class Popup extends React.Component {
       Sport: "Basketball",
       CategorieChoisie: "Sport de ballons",
       SportChoisi: false,
-      ClickedSport: "Basketball"
+      ClickedSport: "Basketball",
+      Step: 0
     };
   }
 
