@@ -7,11 +7,65 @@
   position: absolute;
   top: 8vh;
   left: 4vw;
-  width: 30vw;
+  width: 410px;
   height: 84vh;
-  border-radius: 20 px;
-  background-color: white;
+  border-radius: 20px;
+  background-color: #F1F1F1;
   overflow: hidden;
-  border: 1px solid black;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.headerButton{
+  border: none;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+
+}
+
+.firstButton {
+  border-radius: 35px 0px 0px 35px;
+  background-color: #FFFFFF;
+}
+
+.secondButton {
+  border-radius: 0px 35px 35px 0px;
+  background-color: #E3E3E3;
+}
+
+.currentSportSection{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.currentSportWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.currentSportWrapper h3{
+  margin-top: 15%;
+}
+
+.sportsSection{
+  overflow-y: auto;
+  height: 60%;
+  display: flex;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.sportsSectionTop{
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: fit-content;
 }
 

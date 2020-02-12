@@ -12,7 +12,8 @@ class Sport extends React.Component {
     
     render() {
       return <div className="SportWrapper" onClick={this.props.onClick}>
-                
+                <img src={require(`../assets/img/${this.props.image}.svg`)}/>
+                <div className="Gauge"></div>
              </div>
     }
   }
