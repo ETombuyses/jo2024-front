@@ -1,26 +1,20 @@
-import React from 'react';
-import Football from '../assets/img/Football.svg'
+import React from "react";
+import Football from "../assets/img/Football.svg";
 
-class CurrentSport extends React.Component{
-  constructor(){
+class CurrentSport extends React.Component {
+  constructor() {
     super();
-    this.state ={
-      
-    }
+    this.state = {};
   }
-  
 
-
-  render(){
-    return(
+  render() {
+    return (
       <div className="landingCurrentSportWrapper">
-        <img src={Football} alt="Sport" onClick={this.props.onClick}/>
+        <img src={Football} alt="Sport" onClick={this.props.onClick} />
         <h3>{this.props.name}</h3>
       </div>
-    )
+    );
   }
-  
-  
 }
 
 export default CurrentSport;
