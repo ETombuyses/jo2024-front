@@ -49,8 +49,21 @@ class Popup extends React.Component {
       )
     }else{
       return(
-        <div>
-        <h3>Liste des etablissements :</h3>
+        <div className="forreturn">
+          <span className="returnArrow" onClick={()=>{this.switchDisplay()}}>Retour</span>
+          <h3 className="addressHead">Liste des etablissements :</h3>
+          <div className="addressSection">
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          <Adress name="Centre Sportif Paul Valéry" adress="32 Rue Stéphanie, 75008 Paris"></Adress>
+          </div>
         </div>
       )
     }
