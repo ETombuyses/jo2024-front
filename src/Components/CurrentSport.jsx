@@ -1,5 +1,5 @@
 import React from "react";
-import Football from "../assets/img/Football.svg";
+import Basketball from "../assets/img/Basketball.svg"
 
 class CurrentSport extends React.Component {
   constructor() {
@@ -10,7 +10,7 @@ class CurrentSport extends React.Component {
   render() {
     return (
       <div className="landingCurrentSportWrapper">
-        <img src={Football} alt="Sport" onClick={this.props.onClick} />
+        <img src={Basketball} alt="Sport" onClick={this.props.onClick} />
         <h3>{this.props.name}</h3>
       </div>
     );

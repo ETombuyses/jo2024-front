@@ -1,5 +1,4 @@
 import React from "react";
-import basketball from "../assets/img/Basketball.svg";
 
 class Sport extends React.Component {
   constructor() {
@@ -11,7 +10,7 @@ class Sport extends React.Component {
     return (
       <div>
         <div className="sportWrapper" onClick={this.props.onClick}>
-          <img src={require(`../assets/img/${this.props.image}.svg`)} />
+          <img src={require(`../assets/img/${this.props.name}.svg`)} />
           <div className="gaugeWrapper">
             <div className="Gauge"></div>
           </div>
@@ -19,7 +18,6 @@ class Sport extends React.Component {
         </div>
         <h5 className="sportName">{this.props.name}</h5>
 
-        <h4 className="otherSportsHead">Tous les sports similaires :</h4>
       </div>
     );
   }

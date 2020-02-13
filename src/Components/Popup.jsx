@@ -8,7 +8,9 @@ class Popup extends React.Component {
   constructor() {
     super();
     this.state = {
-      chosenSport: "Basketball"
+      otherSports: ['Basketball','Basketball','Basketball','Basketball','Basketball'],
+      chosenSport: "Basketball",
+      SportChoisi: false
     };
   }
 
@@ -17,6 +19,40 @@ class Popup extends React.Component {
       this.setState({ SportChoisi: false });
     } else {
       this.setState({ SportChoisi: true });
+      console.log(this.state.SportChoisi)
+    }
+  }
+  displaySports() {
+    return this.state.otherSports.map(Sports => (
+      <Sport
+        name={Sports}
+        image={Sports}
+        value="40"
+        onClick={()=>{this.switchDisplay()}}
+      ></Sport>
+    ));
+  }
+
+  displaySportsOrBuildings(){
+    if (this.state.SportChoisi === false) {
+      return(
+        <div className="forreturn">
+          <div className="sportsSectionTop">
+            <span>Établissements</span>
+          </div>
+          <section className="sportsSection">
+            <Sport name={this.state.chosenSport} image={this.state.chosenSport} value="10" onClick={()=>{this.switchDisplay()}}></Sport>
+            <h4 className="otherSportsHead">Tous les sports similaires :</h4>
+            {this.displaySports()}
+          </section>
+        </div>
+      )
+    }else{
+      return(
+        <div>
+        <h3>Liste des etablissements :</h3>
+        </div>
+      )
     }
   }
 
@@ -30,16 +66,12 @@ class Popup extends React.Component {
 
         <div className="currentSportSection">
           <div className="currentSportWrapper">
-            <img src={Basketball} alt="Sport" />
+              <img src={Basketball} alt="Sport" />
             <h3>{this.state.chosenSport}</h3>
           </div>
         </div>
-        <div className="sportsSectionTop">
-          <span>Établissements</span>
-        </div>
-        <section className="sportsSection">
-          <Sport name={this.state.chosenSport} image={this.state.chosenSport} value="10"></Sport>
-        </section>
+        {this.displaySportsOrBuildings()}
+        
       </div>
     );
   }
