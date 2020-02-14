@@ -10,7 +10,7 @@ class CurrentSport extends React.Component {
   render() {
     return (
       <div className="landingCurrentSportWrapper">
-        <img src={Basketball} alt="Sport" onClick={this.props.onClick} />
+        <img src="" alt="Sport" onClick={this.props.onClick} />
         <h3>{this.props.name}</h3>
       </div>
     );

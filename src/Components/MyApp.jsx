@@ -6,9 +6,13 @@ class MyApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      page: 2
+      page: 1
     };
   }
+
+  
+
+
   switchPages() {
     this.setState({ page: 2 });
   }
