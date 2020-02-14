@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import './calendar.css';
 
 class DayCalendar extends Component{
+  constructor(props){
+    super(props);
+  }
+
   onClick(){
     const txt = this.props.text;
-    console.log(txt);
+    console.log(txt)
   }
   render(){
     return(
