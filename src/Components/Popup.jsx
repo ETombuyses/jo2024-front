@@ -1,8 +1,7 @@
 import React from "react";
-import Basketball from "../assets/img/Basketball.svg";
-import Sport from "../Components/Sport";
-import Adress from "../Components/Adress";
-/*import Filters from "../Components/Filters";*/
+import Basketball from "../assets/icon/Basketball.svg";
+import Sport from "./Sport";
+import Adress from "./Adress";
 
 class Popup extends React.Component {
   constructor() {
@@ -10,8 +9,22 @@ class Popup extends React.Component {
     this.state = {
       otherSports: ['Basketball','Basketball','Basketball','Basketball','Basketball'],
       chosenSport: "Basketball",
-      SportChoisi: false
+      SportChoisi: false,
+      similarSports: [
+        {
+          name: "Football",
+          image: "football",
+          
+        }
+      ]
     };
+  }
+
+  //Fonction qui fait une requete vers l'API puis met les données dans la variable data dans le state
+  async componentDidMount() {
+    const response = await fetch(`http://127.0.0.1:8080/olympiceventsbydate/2024-${this.state.monthDate}-${this.state.dayDate}`);
+    const json = await response.json();
+    this.setState({ data: json })
   }
 
   switchDisplay() {
@@ -80,7 +93,7 @@ class Popup extends React.Component {
         <div className="currentSportSection">
           <div className="currentSportWrapper">
               <img src={Basketball} alt="Sport" />
-            <h3>{this.state.chosenSport}</h3>
+            <h3>{this.props.sport}</h3>
           </div>
         </div>
         {this.displaySportsOrBuildings()}

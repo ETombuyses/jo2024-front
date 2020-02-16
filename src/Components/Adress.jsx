@@ -1,9 +1,7 @@
 import React from "react";
 
 class Adress extends React.Component {
-  constructor() {
-    super();
-  }
+  
   render() {
     return (
       <div className="addressWrapper">

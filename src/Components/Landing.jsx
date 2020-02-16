@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Calendrier from "../assets/img/Calendrier.svg";
+import Calendrier from "../assets/icon/Calendrier.svg";
 import OneSport from "./OneSport";
 import Calendar from './Calendar';
 
