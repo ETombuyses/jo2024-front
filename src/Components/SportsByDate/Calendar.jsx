@@ -4,6 +4,13 @@ import './calendar.css';
 
 class Calendar extends Component{
 
+  test(item){
+    let txtDate2 = item.title;
+    this.props.test2({
+      title2: txtDate2
+    })
+  }
+
   render(){
     return(
       <div className='date__popupDate popupDate'>
@@ -32,7 +39,7 @@ class Calendar extends Component{
             </div>
           </div>
           <div className='popupDate__date popupDate__date--1'>
-            <DayCalendar text="26" month="07" />
+            <DayCalendar text="26" month="07" test={this.test.bind(this)} />
             <DayCalendar text="27" month="07" />
             <DayCalendar text="28" month="07" />
           </div>
