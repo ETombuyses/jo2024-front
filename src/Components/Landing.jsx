@@ -1,31 +1,44 @@
-import React from "react";
-import CurrentSport from "../Components/CurrentSport";
+import React, { Component } from "react";
 import Calendrier from "../assets/img/Calendrier.svg";
-import Button from "../assets/img/Button.svg";
+import OneSport from "./OneSport";
+import Calendar from './Calendar';
 
 
-class Landing extends React.Component {
-  constructor() {
-    super();
+class Landing extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      Sports: ["Football", "Gymnastique", "Natation"],
-      Images: ["../assets/img/Football.svg", "../assets/img/"],
-      Today: {
-        Day: "1",
-        Month: "Août"
-      },
-      SportSelected: ""
-    };
+      SportSelected: "",
+      showPopup: false,
+      dayDate: "26",
+      monthDate: "07",
+      data: []
+     };
+  };
+
+  async componentDidMount() {
+    const response = await fetch(`http://127.0.0.1:8080/olympiceventsbydate/2024-${this.state.monthDate}-${this.state.dayDate}`);
+    const json = await response.json();
+    this.setState({ data: json })
   }
 
-  
-  displaySports() {
-    return this.state.Sports.map(Sports => (
-      <CurrentSport
-        name={Sports}
-        onClick={this.props.onClick}
-      ></CurrentSport>
-    ));
+  test2(item){
+    this.setState({ 
+      dayDate: item.title2,
+      monthDate: item.mnth2
+     })
+  }
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+
+  onClick(sport){
+    this.props.onClick({
+      sport: sport.sport
+    })
   }
 
   render() {
@@ -35,26 +48,27 @@ class Landing extends React.Component {
         <h3 className="landingSubTitle">
           Trouver l’établissement parfait pour pratiquer un des sports du jour
         </h3>
-        <p className="landingDate">
-          <span>{this.state.Today.Day} </span>
-          <span>{this.state.Today.Month} 2024 </span>
+        <div className="landingDate">
+          <p onClick={this.togglePopup.bind(this)}>
+            {this.state.dayDate} {this.state.monthDate === "07" ? "juillet" : "août"} 2024
+          </p>
           <img src={Calendrier} alt="Calendrier" />
-        </p>
+        </div>
+        {this.state.showPopup ?
+          <Calendar
+            test2={this.test2.bind(this)}
+            closePopup={this.togglePopup.bind(this)} /> :
+            null
+        }
         <h3 className="landingTodayOlympicsTitle">
           Épreuves olympiques du jour
         </h3>
         <section className="todayOlympicsWrapper">
-          {this.displaySports()}
+          {this.state.data.map(sport => (
+            <OneSport key={sport.image_name} nameSport={sport.practice} srcImage={sport.image_name} onClick={this.onClick.bind(this)} />
+          ))}
         </section>
-        <h3 className="seeMoreTitle">Voir plus de sports</h3>
-        <div className="buttonWrapper">
-          <img
-            src={Button}
-            alt="Button"
-            className="Button"
-            onClick={this.props.onClick}
-          />
-        </div>
+        <h3 className="seeMoreTitle" onClick={this.props.onClick}>Voir plus de sports</h3>
       </div>
     );
   }

@@ -6,19 +6,23 @@ class MyApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      page: 1
+      page: 1,
+      sport: ""
     };
   }
 
-  switchPages() {
-    this.setState({ page: 2 });
+  switchPages(sport) {
+    this.setState({
+      sport: sport.sport,
+      page: 2
+    })
   }
 
   render() {
     return (
       this.state.page === 1 ?
       <Landing onClick={this.switchPages.bind(this)} /> :
-      <Popup />
+      <Popup sport={this.state.sport} />
     );
   }
 }
