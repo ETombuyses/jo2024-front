@@ -1,0 +1,41 @@
+/*
+Colors
+*/
+$bleufonce: #0C1971;
+$bleuclair: #0885C2;
+$jaune: #FBB132;
+$rouge: #ED334E;
+$blanc: #ffffff;
+$noir: #000000;
+
+
+/*
+Fonts
+*/
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@font-face{
+  font-family : "Antonio";
+  src : url('../assets/fonts/antonio.regular.ttf');
+}
+@font-face{
+  font-family : "Antonio";
+  src : url('../assets/fonts/antonio.light.ttf');
+  font-weight: lighter;
+}
+@font-face{
+  font-family : "Antonio";
+  src : url('../assets/fonts/antonio.bold.ttf');
+  font-weight: bold;
+}
+
+$anton: "Anton";
+$antonio: "Antonio";
+
+body{
+  height: 100vh;
+  width: 100vw;
+  color: $blanc;
+  font-family: $antonio;
+  background-color: $bleufonce;
+  font-size: 16px;
+}

@@ -1,0 +1,31 @@
+/*
+Colors
+*/
+/*
+Fonts
+*/
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.regular.ttf");
+}
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.light.ttf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.bold.ttf");
+  font-weight: bold;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+  font-family: "Antonio";
+  background-color: #0C1971;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=global.css.map */
