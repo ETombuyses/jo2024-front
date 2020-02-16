@@ -1,19 +1,14 @@
-import React, {Component} from 'react';
-import Date from './Components/SportsByDate/Date';
-import './App.css';
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+import React from 'react';
+import './Popup.css';
+import './Landing.css';
+import MyApp from './Components/MyApp'
 
-  render(){
-    return (
-      <div className="App">
-        <h1>Où faire du sport à Paris ?</h1>
-        <Date />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <MyApp></MyApp>
+    </div>
+  );
 }
 
 export default App;

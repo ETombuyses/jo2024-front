@@ -1,0 +1,154 @@
+.forreturn {
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 8vh;
+  left: 4vw;
+  width: 410px;
+  height: 84vh;
+  border-radius: 20px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+}
+
+.headerButton {
+  border: none;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+
+}
+
+.firstButton {
+  border-radius: 35px 0px 0px 35px;
+  background-color: #FFFFFF;
+}
+
+.secondButton {
+  border-radius: 0px 35px 35px 0px;
+  background-color: #E3E3E3;
+}
+
+.currentSportSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.currentSportWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.currentSportWrapper h3 {
+  margin-top: 15%;
+}
+
+.sportsSection {
+  overflow-y: auto;
+  height: 50%;
+  margin-top: 7%;
+}
+
+@media(min-height: 1080px){
+  .sportsSection{
+    height: 65%;
+  }
+}
+
+.sportsSectionTop {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: fit-content;
+  font-weight: bold;
+}
+
+.sportWrapper {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10%;
+}
+
+.sportWrapper h4 {
+  height: fit-content;
+  vertical-align: middle;
+  line-height: 55px;
+  margin-left: 13px;
+}
+
+.gaugeWrapper {
+  margin-left: 22px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.Gauge {
+  width: 50%;
+  background: #ED334E;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.gaugeValue{
+  font-weight: bold;
+}
+
+.sportName {
+  text-align: center;
+  font-size: 12px;
+  width: 100px;
+  height: 40px;
+  line-break: strict;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
+.otherSportsHead{
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.forreturn{
+  height: 100%;
+}
+
+.addressHead{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.addressWrapper{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.addressSection {
+  overflow-y: auto;
+  height: 50%;
+  margin-top: 7%;
+}
+
+.returnArrow{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.returnArrow::before{
+  content: "< ";
+}
