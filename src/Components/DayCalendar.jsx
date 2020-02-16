@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import './calendar.css';
 
 class DayCalendar extends Component{
   constructor(props){
     super(props);
     this.state = {
-      txt: this.props.text,
-      mnth: this.props.month
+      day: this.props.text,
+      month: this.props.month
     }
   }
 
   onClick(){
-    this.props.test({
-      title: this.state.txt,
-      month: this.state.mnth
+    this.props.onNewDate({
+      day: this.state.day,
+      month: this.state.month
     })
   }
+
   render(){
     return(
       <div>

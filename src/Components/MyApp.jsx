@@ -11,6 +11,7 @@ class MyApp extends React.Component {
     };
   }
 
+  //Fonction qui va changer le state "sport" et qui va faire apparaître le component Popup
   switchPages(sport) {
     this.setState({
       sport: sport.sport,

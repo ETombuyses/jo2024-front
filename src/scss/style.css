@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+Colors
+*/
+/*
+Fonts
+*/
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.regular.ttf");
+}
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.light.ttf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio.bold.ttf");
+  font-weight: bold;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+  font-family: "Antonio";
+  background-color: #0C1971;
+  font-size: 16px;
+}
+
+.forreturn {
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 8vh;
+  left: 4vw;
+  width: 410px;
+  height: 84vh;
+  border-radius: 20px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+}
+
+.headerButton {
+  border: none;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+}
+
+.firstButton {
+  border-radius: 35px 0px 0px 35px;
+  background-color: #FFFFFF;
+}
+
+.secondButton {
+  border-radius: 0px 35px 35px 0px;
+  background-color: #E3E3E3;
+}
+
+.currentSportSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.currentSportWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.currentSportWrapper h3 {
+  margin-top: 15%;
+}
+
+.sportsSection {
+  overflow-y: auto;
+  height: 50%;
+  margin-top: 7%;
+}
+
+@media (min-height: 1080px) {
+  .sportsSection {
+    height: 65%;
+  }
+}
+.sportsSectionTop {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: fit-content;
+  font-weight: bold;
+}
+
+.sportWrapper {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10%;
+}
+
+.sportWrapper h4 {
+  height: fit-content;
+  vertical-align: middle;
+  line-height: 55px;
+  margin-left: 13px;
+}
+
+.gaugeWrapper {
+  margin-left: 22px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Gauge {
+  width: 50%;
+  background: #ED334E;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.gaugeValue {
+  font-weight: bold;
+}
+
+.sportName {
+  text-align: center;
+  font-size: 12px;
+  width: 100px;
+  height: 40px;
+  line-break: strict;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
+.otherSportsHead {
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.forreturn {
+  height: 100%;
+}
+
+.addressHead {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.addressWrapper {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.addressSection {
+  overflow-y: auto;
+  height: 50%;
+  margin-top: 7%;
+}
+
+.returnArrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.returnArrow::before {
+  content: "< ";
+}
+
+.landingBody {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.landingMainTitle {
+  font-size: 48px;
+  font-family: "Anton";
+}
+
+.landingSubTitle {
+  margin-top: 40px;
+  font-size: 26px;
+}
+
+.landingDate {
+  margin: 50px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landingDate p {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.landingTodayOlympicsTitle {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.todayOlympicsWrapper {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.seeMore {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #ED334E;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.popupDate {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popupDate__inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+  margin: auto;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 20px;
+  color: #000000;
+}
+
+.popupDate__days {
+  grid-column: 1/8;
+  grid-row: 2;
+  display: flex;
+}
+
+.popupDate__days > div, .popupDate__date > div {
+  width: 14.28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupDate__date {
+  grid-column: 1/8;
+  display: flex;
+}
+
+.popupDate__date p {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popupDate__date--1 {
+  grid-row: 3;
+  justify-content: flex-end;
+}
+
+.popupDate__date--2 {
+  grid-row: 4;
+}
+
+.popupDate__date--3 {
+  grid-row: 5;
+}
+
+.popupDate__close {
+  grid-row: 1;
+  grid-column: 7;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,13 +1,42 @@
 import React, { Component } from 'react';
 import DayCalendar from './DayCalendar';
-import './calendar.css';
 
 class Calendar extends Component{
 
-  test(item){
-    this.props.test2({
-      title2: item.title,
-      mnth2: item.month
+  constructor(props){
+    super(props)
+    this.state = {
+      days: ["Lun.", "Mar.", "Mer.", "Jeu.", "Ven.", "Sam.", "Dim."],
+      daysRow1: [
+        ["26", "07"],
+        ["27", "07"],
+        ["28", "07"]
+      ],
+      daysRow2: [
+        ["29", "07"],
+        ["30", "07"],
+        ["31", "07"],
+        ["1", "08"],
+        ["2", "08"],
+        ["3", "08"],
+        ["4", "08"]
+      ],
+      daysRow3: [
+        ["5", "08"],
+        ["6", "08"],
+        ["7", "08"],
+        ["8", "08"],
+        ["9", "08"],
+        ["10", "08"],
+        ["11", "08"]
+      ]
+    }
+  }
+
+  onNewDate(date){
+    this.props.onNewDate({
+      day: date.day,
+      month: date.month
     })
   }
 
@@ -15,53 +44,27 @@ class Calendar extends Component{
     return(
       <div className='date__popupDate popupDate'>
         <div className='popupDate__inner'>
+          <button className='popupDate__close' onClick={this.props.closePopup}>close me</button>
           <div className='popupDate__days'>
-            <div>
-              <p>Lun.</p>
-            </div>
-            <div>
-              <p>Mar.</p>
-            </div>
-            <div>
-              <p>Mer.</p>
-            </div>
-            <div>
-              <p>Jeu.</p>
-            </div>
-            <div>
-              <p>Ven.</p>
-            </div>
-            <div>
-              <p>Sam.</p>
-            </div>
-            <div>
-              <p>Dim.</p>
-            </div>
+            {this.state.days.map(day => {
+              return <div><p>{day}</p></div>
+            })}
           </div>
           <div className='popupDate__date popupDate__date--1'>
-            <DayCalendar text="26" month="07" test={this.test.bind(this)} />
-            <DayCalendar text="27" month="07" test={this.test.bind(this)} />
-            <DayCalendar text="28" month="07" test={this.test.bind(this)} />
+            {this.state.daysRow1.map(day => {
+              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            })}
           </div>
           <div className='popupDate__date popupDate__date--2'>
-            <DayCalendar text="29" month="07" test={this.test.bind(this)} />
-            <DayCalendar text="30" month="07" test={this.test.bind(this)} />
-            <DayCalendar text="31" month="07" test={this.test.bind(this)} />
-            <DayCalendar text="1" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="2" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="3" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="4" month="08" test={this.test.bind(this)} />
+            {this.state.daysRow2.map(day => {
+              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            })}
           </div>
           <div className='popupDate__date popupDate__date--3'>
-            <DayCalendar text="5" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="6" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="7" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="8" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="9" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="10" month="08" test={this.test.bind(this)} />
-            <DayCalendar text="11" month="08" test={this.test.bind(this)} />
+            {this.state.daysRow3.map(day => {
+              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            })}
           </div>
-          <button className='popupDate__close' onClick={this.props.closePopup}>close me</button>
         </div>
       </div>
     )

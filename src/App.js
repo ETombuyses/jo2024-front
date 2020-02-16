@@ -1,6 +1,5 @@
 import React from 'react';
-import './Popup.css';
-import './Landing.css';
+import './scss/style.css'
 import MyApp from './Components/MyApp'
 
 function App() {

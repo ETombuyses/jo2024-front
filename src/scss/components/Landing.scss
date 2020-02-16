@@ -1,0 +1,54 @@
+.landingBody{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.landingMainTitle {
+  font-size: 48px;
+  font-family: $anton;
+}
+
+.landingSubTitle {
+  margin-top: 40px;
+  font-size: 26px;
+}
+
+.landingDate{
+  margin: 50px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    font-weight: bold;
+    margin-right: 20px;
+  }
+}
+
+.landingTodayOlympicsTitle{
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.todayOlympicsWrapper{
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.seeMore{
+  width: fit-content;
+  margin: 0 auto;
+  background-color: $rouge;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
