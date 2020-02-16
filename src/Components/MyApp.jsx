@@ -10,27 +10,16 @@ class MyApp extends React.Component {
     };
   }
 
-  
-
-
   switchPages() {
     this.setState({ page: 2 });
   }
-  handlePages() {
-    if (this.state.page === 1) {
-      return (
-        <Landing
-          onClick={() => {
-            this.switchPages();
-          }}
-        ></Landing>
-      );
-    } else {
-      return <Popup></Popup>;
-    }
-  }
+
   render() {
-    return this.handlePages();
+    return (
+      this.state.page === 1 ?
+      <Landing onClick={this.switchPages.bind(this)} /> :
+      <Popup />
+    );
   }
 }
 

@@ -2,7 +2,6 @@ import React from "react";
 import CurrentSport from "../Components/CurrentSport";
 import Calendrier from "../assets/img/Calendrier.svg";
 import Button from "../assets/img/Button.svg";
-import {useEffect} from 'react';
 
 
 class Landing extends React.Component {
@@ -18,6 +17,7 @@ class Landing extends React.Component {
       SportSelected: ""
     };
   }
+
   
   displaySports() {
     return this.state.Sports.map(Sports => (
