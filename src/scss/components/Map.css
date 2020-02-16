@@ -1,0 +1,18 @@
+.map_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100vh;
+}
+.map_wrapper .map_svg {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+.number.is-hidden {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=Map.css.map */

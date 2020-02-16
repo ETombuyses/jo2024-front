@@ -135,7 +135,7 @@ function ParisMap () {
     let newViewboxX = -(mapCenterX - shapeCenterX)
     let newViewboxY = -(mapCenterY - shapeCenterY)
 
-    let newX = (385/2) - (200/2) + newViewboxX    
+    let newX = (385/2) - (200/2) + newViewboxX
     let newY = (204/2) - (200/2) + newViewboxY
 
     // console.log(mapCenterX, centerX)

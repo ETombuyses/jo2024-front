@@ -52,17 +52,17 @@ class Calendar extends Component{
           </div>
           <div className='popupDate__date popupDate__date--1'>
             {this.state.daysRow1.map(day => {
-              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
           <div className='popupDate__date popupDate__date--2'>
             {this.state.daysRow2.map(day => {
-              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
           <div className='popupDate__date popupDate__date--3'>
             {this.state.daysRow3.map(day => {
-              return <DayCalendar text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
         </div>

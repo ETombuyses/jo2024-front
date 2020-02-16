@@ -22,12 +22,13 @@ class Landing extends Component {
     this.setState({ data: json })
   }
 
-  //Fonction qui change les valeurs de dayDate et monthDate par rapport à la date sur laquelle on a cliqué dans le calendrier
+  //Fonction qui change les valeurs de dayDate et monthDate par rapport à la date sur laquelle on a cliqué dans le calendrier et fermer le calendrier
   onNewDate(date){
     this.setState(
       {
       dayDate: date.day,
-      monthDate: date.month
+      monthDate: date.month,
+      showPopup: !this.state.showPopup
       },
       //Fonction de callback qui rappelle la fonction componentDidMount car les valeurs dayDate et monthDate ont changés
       ()=>{this.componentDidMount()}
@@ -69,7 +70,7 @@ class Landing extends Component {
         <h3 className="landingTodayOlympicsTitle">Épreuves olympiques du jour</h3>
         <section className="todayOlympicsWrapper">
           {this.state.data.map(sport => (
-            <OneSport key={sport.image_name} nameSport={sport.practice} srcImage={sport.image_name} onClick={this.onClick.bind(this)} />
+            <OneSport key={sport.image} nameSport={sport.practice} srcImage={sport.image} onClick={this.onClick.bind(this)} />
           ))}
         </section>
         <div className="seeMore" onClick={this.props.onClick}>

@@ -1,5 +1,6 @@
-import './scss/style.css'
-import MyApp from './Components/MyApp'
+import React from 'react';
+import './scss/style.css';
+import MyApp from './Components/MyApp';
 
 function App() {
   return (

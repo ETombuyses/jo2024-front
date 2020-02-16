@@ -1,7 +1,6 @@
-import React from "react";
+import React, {Component} from "react";
 
-class Adress extends React.Component {
-  
+class Adress extends Component {
   render() {
     return (
       <div className="addressWrapper">

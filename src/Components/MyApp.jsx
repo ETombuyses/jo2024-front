@@ -1,6 +1,6 @@
 import React from "react";
 import Landing from "./Landing";
-import Popup from "./Popup";
+import Content from "./Content";
 
 class MyApp extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ class MyApp extends React.Component {
     return (
       this.state.page === 1 ?
       <Landing onClick={this.switchPages.bind(this)} /> :
-      <Popup sport={this.state.sport} />
+      <Content chosenSport={this.state.sport} />
     );
   }
 }

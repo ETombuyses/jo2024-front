@@ -14,7 +14,6 @@ class Popup extends React.Component {
         {
           name: "Football",
           image: "football",
-          
         }
       ]
     };
@@ -89,15 +88,7 @@ class Popup extends React.Component {
           <button className="headerButton firstButton">Épreuves du jour</button>
           <button className="headerButton secondButton">Tous les sports</button>
         </header>
-
-        <div className="currentSportSection">
-          <div className="currentSportWrapper">
-              <img src={Basketball} alt="Sport" />
-            <h3>{this.props.sport}</h3>
-          </div>
-        </div>
         {this.displaySportsOrBuildings()}
-        
       </div>
     );
   }
