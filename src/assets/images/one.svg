@@ -1,0 +1,6 @@
+<svg id="map" className="map_svg" viewBox="0 0 385 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g className="arrondissement" id="1">
+          <path d="M165.168 76.5312L161.654 78.2883L155.016 91.5642L173.563 100.35L189.767 111.868L198.357 91.5642L165.168 76.5312Z" fill="#EDEDED"/>
+          <path className="number" d="M177.009 96.439H175.598V90.9995L173.913 91.522V90.3745L176.857 89.3198H177.009V96.439Z" fill="white"/>
+        </g>
+      </svg>

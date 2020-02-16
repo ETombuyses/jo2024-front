@@ -1,4 +1,3 @@
-import React from 'react';
 import './scss/style.css'
 import MyApp from './Components/MyApp'
 

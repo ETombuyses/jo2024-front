@@ -1,0 +1,22 @@
+.map_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .map_svg {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    background: red;
+  }
+}
+
+
+.number {
+  // fill: white;
+  &.is-hidden {
+    opacity: 0;
+  }
+}
