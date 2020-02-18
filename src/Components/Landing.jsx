@@ -20,6 +20,7 @@ class Landing extends Component {
     const response = await fetch(`http://127.0.0.1:8080/olympiceventsbydate/2024-${this.state.monthDate}-${this.state.dayDate}`);
     const json = await response.json();
     this.setState({ data: json })
+    console.log(this.state.data)
   }
 
   //Fonction qui change les valeurs de dayDate et monthDate par rapport à la date sur laquelle on a cliqué dans le calendrier et fermer le calendrier
@@ -45,7 +46,15 @@ class Landing extends Component {
   //Fonction qui va envoyer le nom du sport cliqué dans la props onClick du component Landing
   onClick(sport){
     this.props.onClick({
-      sport: sport.sport
+      sport: sport.sport,
+      picSport: sport.picSport,
+      idSport: sport.idSport
+    })
+  }
+
+  allSports(sport){
+    this.props.onClick({
+      allSports : true
     })
   }
 
@@ -63,17 +72,17 @@ class Landing extends Component {
         {this.state.showPopup ?
           <Calendar
             onNewDate={this.onNewDate.bind(this)}
-            closePopup={this.togglePopup.bind(this)} 
+            closePopup={this.togglePopup.bind(this)}
           /> :
           null
         }
         <h3 className="landingTodayOlympicsTitle">Épreuves olympiques du jour</h3>
         <section className="todayOlympicsWrapper">
           {this.state.data.map(sport => (
-            <OneSport key={sport.image} nameSport={sport.practice} srcImage={sport.image} onClick={this.onClick.bind(this)} />
+            <OneSport key={sport.image} nameSport={sport.practice} idSport={sport.id} srcImage={sport.image} onClick={this.onClick.bind(this)} />
           ))}
         </section>
-        <div className="seeMore" onClick={this.props.onClick}>
+        <div className="seeMore" onClick={this.allSports.bind(this)}>
           <h4>Voir plus de sports</h4>
         </div>
       </div>

@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 
 class OneSport extends Component{
 
+  constructor(props){
+    super(props)
+    this.state = {
+      idSport: this.props.idSport
+    }
+  }
+
   onClick(){
     this.props.onClick({
       sport: this.props.nameSport,
+      picSport: this.props.srcImage,
+      idSport: this.state.idSport
     })
   }
 

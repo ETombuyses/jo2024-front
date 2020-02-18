@@ -1,16 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 
-class Sport extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
+class Sport extends Component {
 
   render() {
     return (
       <div>
         <div className="sportWrapper" onClick={this.props.onClick}>
-          <img src={require(`../assets/icon/${this.props.name}.svg`)} />
+          <img src={require(`../assets/icon-sport/${this.props.pic}.svg`)} />
           <div className="gaugeWrapper">
             <div className="Gauge"></div>
           </div>
