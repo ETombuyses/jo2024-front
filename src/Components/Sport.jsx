@@ -17,7 +17,6 @@ class Sport extends React.Component {
           <h4 className="gaugeValue">{this.props.value}</h4>
         </div>
         <h5 className="sportName">{this.props.name}</h5>
-
       </div>
     );
   }

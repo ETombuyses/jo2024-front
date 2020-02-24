@@ -2,15 +2,12 @@ import React from "react";
 import CurrentSport from "../Components/CurrentSport";
 import Calendrier from "../assets/img/Calendrier.svg";
 import Button from "../assets/img/Button.svg";
-import {useEffect} from 'react';
-
 
 class Landing extends React.Component {
   constructor() {
     super();
     this.state = {
       Sports: ["Football", "Gymnastique", "Natation"],
-      Images: ["../assets/img/Football.svg", "../assets/img/"],
       Today: {
         Day: "1",
         Month: "Août"
@@ -18,13 +15,10 @@ class Landing extends React.Component {
       SportSelected: ""
     };
   }
-  
+
   displaySports() {
     return this.state.Sports.map(Sports => (
-      <CurrentSport
-        name={Sports}
-        onClick={this.props.onClick}
-      ></CurrentSport>
+      <CurrentSport name={Sports} onClick={this.props.onClick}></CurrentSport>
     ));
   }
 

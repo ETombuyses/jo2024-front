@@ -1,5 +1,5 @@
 import React from "react";
-import Basketball from "../assets/img/Basketball.svg"
+import Basketball from "../assets/img/Basketball.svg";
 
 class CurrentSport extends React.Component {
   constructor() {
