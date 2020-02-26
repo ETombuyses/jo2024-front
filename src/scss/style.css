@@ -86,134 +86,61 @@ body {
   position: absolute;
   top: 8vh;
   left: 4vw;
-  width: 410px;
-  height: 84vh;
+  width: 500px;
+  height: 950px;
   border-radius: 20px;
   background-color: #ffffff;
   color: #000000;
-  overflow: hidden;
+}
+.popup h4 {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.popupHeader {
+.popup__content {
+  position: relative;
+  width: 100%;
+}
+
+.popup__header {
   display: flex;
   justify-content: center;
-  margin-top: 7%;
+  padding: 30px 0;
+  position: fixed;
+  width: 500px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
 }
-
-.headerButton {
+.popup__header button {
   border: none;
   font-size: 14px;
   padding: 10px 20px 10px 20px;
-}
-
-.firstButton {
-  border-radius: 35px 0px 0px 35px;
-  background-color: #FFFFFF;
-}
-
-.secondButton {
-  border-radius: 0px 35px 35px 0px;
-  background-color: #E3E3E3;
-}
-
-.sportsSection {
-  overflow-y: auto;
-  height: 50%;
-  margin-top: 7%;
-}
-
-@media (min-height: 1080px) {
-  .sportsSection {
-    height: 65%;
-  }
-}
-.sportsSectionTop {
-  width: 80%;
-  margin-top: 10%;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: row-reverse;
-  height: fit-content;
+  border: 1px solid black;
+  font-family: "Antonio";
   font-weight: bold;
 }
 
-.sportWrapper {
+.popup__main {
+  padding: 105px 30px 0 30px;
+  height: 730px;
+  overflow: scroll;
+}
+
+.popup__footer {
   display: flex;
-  margin-top: 5px;
-  margin-left: 10%;
+  height: 120px;
+  position: fixed;
+  width: 500px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  border-top: 1px solid #D9D9D9;
 }
-
-.sportWrapper h4 {
-  height: fit-content;
-  vertical-align: middle;
-  line-height: 55px;
-  margin-left: 13px;
-}
-
-.gaugeWrapper {
-  margin-left: 22px;
+.popup__footer > div {
   width: 50%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-}
-
-.Gauge {
-  width: 50%;
-  background: #ED334E;
-  height: 20px;
-  border-radius: 20px;
-}
-
-.gaugeValue {
-  font-weight: bold;
-}
-
-.sportName {
-  text-align: center;
-  font-size: 12px;
-  width: 100px;
-  height: 40px;
-  line-break: strict;
-  margin-left: 5%;
-  margin-top: 5px;
-}
-
-.otherSportsHead {
-  margin-left: 10%;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.forreturn {
-  height: 100%;
-}
-
-.addressHead {
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.addressWrapper {
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.addressSection {
-  overflow-y: auto;
-  height: 50%;
-  margin-top: 7%;
-}
-
-.returnArrow {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
-}
-
-.returnArrow::before {
-  content: "< ";
+  justify-content: center;
+  align-items: center;
 }
 
 .landingBody {
@@ -244,6 +171,7 @@ body {
 .landingDate p {
   font-weight: bold;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .landingTodayOlympicsTitle {
@@ -352,17 +280,79 @@ body {
   width: 60px;
 }
 
-.map_wrapper {
+.sportSingle {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sportSingle__picName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+.sportSingle__picName img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+.sportSingle__picName h5 {
+  text-align: center;
+}
+
+.sportSingle__gauge {
+  width: 60%;
+}
+.sportSingle__gauge div {
+  width: 50%;
+  background: #ED334E;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.sportSingle__value {
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
+
+.map__wrapper {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   height: 100vh;
 }
-.map_wrapper .map_svg {
+.map__wrapper h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.map__content {
+  width: 800px;
+}
+
+.map__svg {
   width: 100%;
   height: auto;
   max-width: 800px;
+}
+
+.adress {
+  height: 830px;
+  padding: 0 30px;
+}
+
+.adress__back {
+  margin: 30px 0;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

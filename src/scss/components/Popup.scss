@@ -6,135 +6,61 @@
   position: absolute;
   top: 8vh;
   left: 4vw;
-  width: 410px;
-  height: 84vh;
+  width: 500px;
+  height: 950px;
   border-radius: 20px;
   background-color: $blanc;
   color: $noir;
-  overflow: hidden;
-}
 
-.popupHeader {
-  display: flex;
-  justify-content: center;
-  margin-top: 7%;
-}
-
-.headerButton {
-  border: none;
-  font-size: 14px;
-  padding: 10px 20px 10px 20px;
-
-}
-
-.firstButton {
-  border-radius: 35px 0px 0px 35px;
-  background-color: #FFFFFF;
-}
-
-.secondButton {
-  border-radius: 0px 35px 35px 0px;
-  background-color: #E3E3E3;
-}
-
-.sportsSection {
-  overflow-y: auto;
-  height: 50%;
-  margin-top: 7%;
-}
-
-@media(min-height: 1080px){
-  .sportsSection{
-    height: 65%;
+  h4{
+    font-weight: bold;
+    font-size: 20px;
   }
 }
 
-.sportsSectionTop {
-  width: 80%;
-  margin-top: 10%;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: row-reverse;
-  height: fit-content;
-  font-weight: bold;
+.popup__content{
+  position: relative;
+  width: 100%;
 }
 
-.sportWrapper {
-  display: flex;
-  margin-top: 5px;
-  margin-left: 10%;
-}
-
-.sportWrapper h4 {
-  height: fit-content;
-  vertical-align: middle;
-  line-height: 55px;
-  margin-left: 13px;
-}
-
-.gaugeWrapper {
-  margin-left: 22px;
-  width: 50%;
+.popup__header {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-
+  padding: 30px 0;
+  position: fixed;
+  width: 500px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  button{
+    border: none;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid black;
+    font-family: $antonio;
+    font-weight: bold;
+  }
 }
 
-.Gauge {
-  width: 50%;
-  background: #ED334E;
-  height: 20px;
-  border-radius: 20px;
+.popup__main{
+  padding: 105px 30px 0 30px;
+  height: 730px;
+  overflow: scroll;
 }
 
-.gaugeValue{
-  font-weight: bold;
-}
+.popup__footer{
+  display: flex;
+  height: 120px;
+  position: fixed;
+  width: 500px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  border-top: 1px solid #D9D9D9;
 
-.sportName {
-  text-align: center;
-  font-size: 12px;
-  width: 100px;
-  height: 40px;
-  line-break: strict;
-  margin-left: 5%;
-  margin-top: 5px;
-}
-
-.otherSportsHead{
-  margin-left: 10%;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.forreturn{
-  height: 100%;
-}
-
-.addressHead{
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.addressWrapper{
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.addressSection {
-  overflow-y: auto;
-  height: 50%;
-  margin-top: 7%;
-}
-
-.returnArrow{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
-}
-
-.returnArrow::before{
-  content: "< ";
+  > div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

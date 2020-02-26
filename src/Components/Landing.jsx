@@ -20,7 +20,6 @@ class Landing extends Component {
     const response = await fetch(`http://127.0.0.1:8080/olympiceventsbydate/2024-${this.state.monthDate}-${this.state.dayDate}`);
     const json = await response.json();
     this.setState({ data: json })
-    console.log(this.state.data)
   }
 
   //Fonction qui change les valeurs de dayDate et monthDate par rapport à la date sur laquelle on a cliqué dans le calendrier et fermer le calendrier

@@ -6,7 +6,9 @@ class SimilarSports extends Component{
     super(props)
     this.state = {
       idSportChosen: this.props.idSport,
-      data: []
+      idSportSimilar: '' ,
+      data: [],
+      adress: []
     }
   }
 
@@ -17,12 +19,20 @@ class SimilarSports extends Component{
     this.setState({ data: json.otherFamilies })
   }
 
+  onClick(sport){
+    this.props.changePage({
+      idSport: sport.idSport,
+      nameSport: sport.nameSport,
+      picSport: sport.picSport
+    })
+  }
+
   render(){
     return(
-      <div>
-        <p>Épreuves similaires</p>
+      <div className="similarSports">
+        <h4>Épreuves similaires</h4>
         {this.state.data.map(similarSport => (
-          <Sport name={similarSport.practice} pic={similarSport.image} value="20" />
+          <Sport name={similarSport.practice} pic={similarSport.image} id={similarSport.id} changePage={this.onClick.bind(this)} />
         ))}
       </div>
     )
