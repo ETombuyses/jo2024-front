@@ -75,7 +75,6 @@ class ParisMap extends Component {
             })}
           </svg>
           {/* <div className="map__caption">
-            
           </div>
         </div> */}
       </div>

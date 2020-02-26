@@ -6,9 +6,8 @@ import Adress from "./Adress";
 import AccessibiliteSingle from "./AccessibiliteSingle";
 
 class Popup extends Component {
-
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       page: 1,
       idSport: '',
@@ -18,13 +17,13 @@ class Popup extends Component {
     }
   }
 
-  changePage(sport){
+  changePage(sport) {
     this.setState({
       idSport: sport.idSport,
       nameSport: sport.nameSport,
       picSport: sport.picSport,
       page: 2
-    })
+    });
   }
 
   changePageOther(){
@@ -37,23 +36,37 @@ class Popup extends Component {
     return (
       <div className="popup">
         <div className="popup__content">
-          {this.state.page === 1 ?
-          <div>
-            <div className="popup__header">
-              <button>Épreuves du jour</button>
-              <button>Tous les sports</button>
-            </div>
-            <div className="popup__main">
-              {this.props.arrondissement}
-              {this.props.allSports === true ?
-              <AllSports arrondissement={this.props.arrondissement} changePage={this.changePage.bind(this)} /> :
-              <div>
-                <ChosenSport nameSport={this.props.sport} namePic={this.props.picSport} idSport={this.props.idSport} arrondissement={this.props.arrondissement} changePage={this.changePage.bind(this)} />
-                <SimilarSports idSport={this.props.idSport} arrondissement={this.props.arrondissement} changePage={this.changePage.bind(this)} />
+          {this.state.page === 1 ? (
+            <div>
+              <div className="popup__header">
+                <button>Épreuves du jour</button>
+                <button>Tous les sports similaires</button>
               </div>
-              }
-            </div>
-          </div> :
+              <div className="popup__main">
+                {this.props.arrondissement}
+                {this.props.allSports === true ? (
+                  <AllSports
+                    arrondissement={this.props.arrondissement}
+                    changePage={this.changePage.bind(this)}
+                  />
+                ) : (
+                  <div>
+                    <ChosenSport
+                      nameSport={this.props.sport}
+                      namePic={this.props.picSport}
+                      idSport={this.props.idSport}
+                      arrondissement={this.props.arrondissement}
+                      changePage={this.changePage.bind(this)}
+                    />
+                    <SimilarSports
+                      idSport={this.props.idSport}
+                      arrondissement={this.props.arrondissement}
+                      changePage={this.changePage.bind(this)}
+                    />
+                  </div>
+                )}
+              </div>
+            </div>) :
           <Adress pic={this.state.picSport} name={this.state.nameSport} id={this.state.idSport} changePageOther={this.changePageOther.bind(this)} arrondissement={this.props.arrondissement} />
           }
           <div className="popup__footer">
