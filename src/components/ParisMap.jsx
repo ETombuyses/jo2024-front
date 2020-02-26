@@ -63,7 +63,7 @@ class ParisMap extends Component {
     return (
       <div className="map__wrapper">
         <div className="map__content">
-          <h2>Séléctionnez un arrondissement</h2>
+          <h2>Sélectionnez un arrondissement</h2>
           <svg id="map" className="map__svg" viewBox="0 0 385 204" fill="none" xmlns="http://www.w3.org/2000/svg">
             {this.state.arrondissementShapes.map(arrondissement => {
               return (
