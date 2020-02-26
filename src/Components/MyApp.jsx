@@ -2,8 +2,6 @@ import React from "react";
 import Landing from "./Landing";
 import Popup from "./Popup";
 
-const context = React.createContext("");
-
 class MyApp extends React.Component {
   constructor() {
     super();
@@ -11,6 +9,8 @@ class MyApp extends React.Component {
       page: 1
     };
   }
+
+  
 
   switchPages() {
     this.setState({ page: 2 });
@@ -25,15 +25,12 @@ class MyApp extends React.Component {
         ></Landing>
       );
     } else {
-      return (
-        <context.Provider SportSelected="yes">
-          <Popup></Popup>
-        </context.Provider>
-      );
+      return <Popup></Popup>;
     }
   }
   render() {
     return this.handlePages();
+    console.log(this.props.term)
   }
 }
 
