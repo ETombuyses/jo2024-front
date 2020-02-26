@@ -3,6 +3,7 @@ import ChosenSport from "./ChosenSport";
 import SimilarSports from "./SimilarSports";
 import AllSports from "./AllSports";
 import Adress from "./Adress";
+import AccessibiliteSingle from "./AccessibiliteSingle";
 
 class Popup extends Component {
 
@@ -12,7 +13,8 @@ class Popup extends Component {
       page: 1,
       idSport: '',
       nameSport: '',
-      picSport: ''
+      picSport: '',
+      arrondissement: this.props.arrondissement
     }
   }
 
@@ -22,6 +24,12 @@ class Popup extends Component {
       nameSport: sport.nameSport,
       picSport: sport.picSport,
       page: 2
+    })
+  }
+
+  changePageOther(){
+    this.setState({
+      page: 1
     })
   }
 
@@ -46,11 +54,15 @@ class Popup extends Component {
               }
             </div>
           </div> :
-          <Adress pic={this.state.picSport} name={this.state.nameSport} id={this.state.idSport} />
+          <Adress pic={this.state.picSport} name={this.state.nameSport} id={this.state.idSport} changePageOther={this.changePageOther.bind(this)} arrondissement={this.props.arrondissement} />
           }
           <div className="popup__footer">
             <div className="popupFooter__accessibilite">
               <h5>Accessibilité</h5>
+              <div className="popupFooter__accessibilites">
+                <AccessibiliteSingle />
+                <AccessibiliteSingle />
+              </div>
             </div>
             <div className="popupFooter__filters">
               <div>

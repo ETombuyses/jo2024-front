@@ -32,7 +32,7 @@ class SimilarSports extends Component{
       <div className="similarSports">
         <h4>Épreuves similaires</h4>
         {this.state.data.map(similarSport => (
-          <Sport name={similarSport.practice} pic={similarSport.image} id={similarSport.id} changePage={this.onClick.bind(this)} />
+          <Sport name={similarSport.practice} pic={similarSport.image} id={similarSport.id} changePage={this.onClick.bind(this)} arrondissement={this.props.arrodissement} />
         ))}
       </div>
     )

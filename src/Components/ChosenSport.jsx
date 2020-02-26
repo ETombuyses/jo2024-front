@@ -21,7 +21,7 @@ class ChosenSport extends Component{
     return(
       <div>
         <h4>Épreuve choisie</h4>
-        <Sport name={this.props.nameSport} pic={this.props.namePic} id={this.state.idSportChosen} changePage={this.onClick.bind(this)} />
+        <Sport name={this.props.nameSport} pic={this.props.namePic} id={this.state.idSportChosen} changePage={this.onClick.bind(this)} arrondissement={this.props.arrodissement} />
       </div>
     )
   }

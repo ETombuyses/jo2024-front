@@ -7,7 +7,7 @@ class Sport extends Component {
     this.state = {
       idSport: this.props.id,
       adress: [],
-      arrondissement: '',
+      arrondissement: undefined,
     }
   }
 

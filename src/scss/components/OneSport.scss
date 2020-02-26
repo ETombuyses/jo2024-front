@@ -1,6 +1,22 @@
 .OneSport{
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  >div{
+    background-color: #FFF;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
   img{
-    width: 60px;
+    max-width: 50px;
+    max-height: 50px;
   }
 }

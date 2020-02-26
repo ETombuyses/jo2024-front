@@ -62,22 +62,22 @@ class ParisMap extends Component {
   render(){
     return (
       <div className="map__wrapper">
-        <div className="map__content">
-          <h2>Séléctionnez un arrondissement</h2>
+        {/* <div className="map__content">
+          <h2>Séléctionnez un arrondissement</h2> */}
           <svg id="map" className="map__svg" viewBox="0 0 385 204" fill="none" xmlns="http://www.w3.org/2000/svg">
             {this.state.arrondissementShapes.map(arrondissement => {
               return (
                 <g className="arrondissement" id={arrondissement[0]} onClick={this.arrondissementClicked.bind(this)}>
-                  <path d={arrondissement[1]} data-value={arrondissement[0]} stroke="#FFF"/>
+                  <path d={arrondissement[1]} data-value={arrondissement[0]} fill="#0C1971" stroke="#FFF"/>
                   <path className="number" data-value={arrondissement[0]} d={this.state.arrondissementNumbers[arrondissement[0] - 1][1]} fill="white"/>
                 </g>
               )
             })}
           </svg>
-          <div className="map__caption">
+          {/* <div className="map__caption">
             
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }
