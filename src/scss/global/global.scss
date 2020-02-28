@@ -13,6 +13,7 @@ $noir: #000000;
 Fonts
 */
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @font-face{
   font-family : "Antonio";
   src : url('../assets/fonts/antonio.regular.ttf');
@@ -30,6 +31,7 @@ Fonts
 
 $anton: "Anton";
 $antonio: "Antonio";
+$roboto: "Roboto";
 
 body{
   height: 100vh;

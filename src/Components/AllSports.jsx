@@ -5,8 +5,14 @@ class AllSports extends Component{
   constructor(props){
     super(props)
     this.state = {
-      arrondissement: ''
+      data: []
     }
+  }
+
+  async componentDidMount() {
+    const response = await fetch(`http://127.0.0.1:8080/all-olympic-sports/false/false/false`);
+    const json = await response.json();
+    this.setState({ data: json })
   }
 
   onClick(sport){
@@ -20,9 +26,12 @@ class AllSports extends Component{
   render(){
     return(
       <div>
-        <h4>Tous les sports {this.state.arrondissement}</h4>
+        <div className="chosenSport__title">
+          <h4>Tous les sports</h4>
+          <h5>Nombre d'établissements</h5>
+        </div>
         {this.state.data.map(sport => (
-          <Sport name={sport.practice} pic={sport.image} id={sport.id} changePage={this.onClick.bind(this)} arrondissement={this.props.arrodissement} />
+          <Sport key={sport.id} name={sport.practice} pic={sport.image} id={sport.id} changePage={this.onClick.bind(this)} arrondissement={this.props.arrondissement} handicapSensory={this.props.handicapSensory} handicapMobility={this.props.handicapMobility} level={this.props.level} />
         ))}
       </div>
     )

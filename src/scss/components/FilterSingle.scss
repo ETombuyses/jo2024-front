@@ -1,0 +1,20 @@
+.filterSingle{
+  width: 45%;
+  background: #F1F1F1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 3px 3px 10px 0px #9b9b9b;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  &:hover{
+    background: $rouge;
+    color: #fff;
+  }
+  &.is-clicked{
+    background: $rouge;
+    color: #fff;
+  }
+}

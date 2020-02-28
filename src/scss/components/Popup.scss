@@ -4,12 +4,12 @@
 
 .popup {
   position: absolute;
-  top: 8vh;
+  top: 10px;
   left: 4vw;
-  width: 500px;
-  height: 950px;
+  width: 560px;
+  height: 90vh;
   border-radius: 20px;
-  background-color: $blanc;
+  background-color: #F1F1F1;
   color: $noir;
 
   h4 {
@@ -28,44 +28,113 @@
   justify-content: center;
   padding: 30px 0;
   position: fixed;
-  width: 500px;
-  background: #fff;
+  width: 560px;
+  background: #F1F1F1;
   border-radius: 20px 20px 0 0;
   button {
     border: none;
     font-size: 14px;
-    padding: 10px 20px 10px 20px;
-    border: 1px solid black;
+    padding: 7px 20px;
+    border: 1px solid #E3E3E3;
     font-family: $antonio;
     font-weight: bold;
     cursor: pointer;
+    &:first-child{
+      border-radius: 30px 0 0 30px;
+    }
+    &:last-child{
+      border-radius: 0 30px 30px 0;
+    }
   }
 }
 
+.popup__transition{
+  height: 105px;
+}
+
 .popup__main {
-  padding: 105px 30px 0 30px;
-  height: 730px;
-  overflow: scroll;
+  margin: 10px 30px;
+  height: calc(88vh - 105px - 121px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #DDDDDD;
+    border-radius: 20px;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #000000; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+  > div{
+    margin-right: 30px;
+  }
 }
 
 .popup__footer {
   display: flex;
   height: 120px;
   position: fixed;
-  width: 500px;
-  background-color: white;
+  width: 560px;
+  background-color: #F1F1F1;
   border-radius: 0 0 20px 20px;
   border-top: 1px solid #d9d9d9;
 
   > div {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
+}
+
+.popupFooter__accessibilite{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupFooter__accessibiliteTitle{
+  margin-bottom: 10px;
 }
 
 .popupFooter__accessibilites{
   display: flex;
+}
+
+.popupFooter__filters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.chosenSport__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h5{
+    width: 100px;
+    text-align: right;
+  }
+}
+
+.popup__noSport{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

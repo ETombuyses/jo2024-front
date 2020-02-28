@@ -21,7 +21,7 @@ class OneSport extends Component{
     return(
       <div onClick={this.onClick.bind(this)} className="OneSport">
         <div>
-          <img src={require(`../assets/icon-sport/${this.props.srcImage}.svg`)} alt="Image du sport"/>
+          <img src={require(`../assets/icon-sport/${this.props.srcImage}-white.svg`)} alt="Image du sport"/>
         </div>
         <h3>{this.props.nameSport}</h3>
       </div>

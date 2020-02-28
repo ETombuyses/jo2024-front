@@ -1,41 +1,17 @@
-.sportSingle {
-  margin: 50px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 27 |   border: 2px solid $rouge;
+ *    |                     ^^^^^^
+ *    '
+ *   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Sport.scss 27:21  root stylesheet */
 
-.sportSingle__picName {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 27 \2502    border: 2px solid $rouge;\a    \2502                      ^^^^^^\a    \2575 \a   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Sport.scss 27:21  root stylesheet";
 }
-.sportSingle__picName img {
-  max-width: 50px;
-  max-height: 50px;
-  margin-bottom: 10px;
-}
-.sportSingle__picName h5 {
-  text-align: center;
-}
-
-.sportSingle__gauge {
-  width: 60%;
-}
-.sportSingle__gauge div {
-  width: 50%;
-  background: #ED334E;
-  height: 20px;
-  border-radius: 20px;
-}
-
-.sportSingle__value {
-  font-weight: bold;
-  width: 50px;
-  text-align: center;
-}
-
-/*# sourceMappingURL=Sport.css.map */

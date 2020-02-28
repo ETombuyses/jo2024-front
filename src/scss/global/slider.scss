@@ -1,0 +1,57 @@
+body {
+  background-color: #0c1971;
+}
+
+.slider--wrapper {
+  width: 750px;
+  height: 15vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.slider {
+  width: 750px;
+  height: 15vh;
+  overflow: hidden;
+}
+
+.slider--button {
+  position: absolute;
+  width: 25px;
+  height: 15vh;
+  border: none;
+  background-color: transparent;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.prev--button {
+  top: 0px;
+  left: -25px;
+  visibility: hidden;
+}
+
+.next--button {
+  right: -25px;
+  top: 0px;
+}
+
+.slides {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  transform: translateX(0px);
+  transition: ease 0.5s;
+}
+
+.slide {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 12 |   background-color: $blanc;
- *    |                     ^^^^^^
+ * 13 |   color: $noir;
+ *    |          ^^^^^
  *    '
- *   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Popup.scss 12:21  root stylesheet */
+ *   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Popup.scss 13:10  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 12 \2502    background-color: $blanc;\a    \2502                      ^^^^^^\a    \2575 \a   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Popup.scss 12:21  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 13 \2502    color: $noir;\a    \2502           ^^^^^\a    \2575 \a   /Applications/MAMP/htdocs/hetic/jo2024-front/src/scss/components/Popup.scss 13:10  root stylesheet";
 }

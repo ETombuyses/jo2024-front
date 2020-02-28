@@ -6,7 +6,7 @@
   justify-content: center;
   margin: 20px;
   >div{
-    background-color: #FFF;
+    background-color: #2A3BAF;
     height: 80px;
     width: 80px;
     display: flex;
@@ -14,6 +14,10 @@
     align-items: center;
     border-radius: 50%;
     margin-bottom: 20px;
+    transition: background-color 0.3s;
+    &:hover{
+      background-color: #ED334E;
+    }
   }
   img{
     max-width: 50px;

@@ -19,7 +19,7 @@ class DayCalendar extends Component{
   render(){
     return(
       <div>
-        <p onClick={this.onClick.bind(this)} className='popupDate__single'>{this.props.text}</p>
+        <p onClick={this.onClick.bind(this)} style={this.props.isChosen === true ? {background: '#0C1971', color: '#FFF'} : {background: '#FFF', color: '#000000'}} className='popupDate__single'>{this.props.text}</p>
       </div>
     )
   }

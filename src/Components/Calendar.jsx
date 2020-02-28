@@ -44,25 +44,26 @@ class Calendar extends Component{
     return(
       <div className='date__popupDate popupDate'>
         <div className='popupDate__inner'>
-          <button className='popupDate__close' onClick={this.props.closePopup}>close me</button>
+          <h5 className='popupDate__title'>Juillet - Août</h5>
+          <button className='popupDate__close' onClick={this.props.closePopup}>Fermer</button>
           <div className='popupDate__days'>
-            {this.state.days.map(day => {
-              return <div><p>{day}</p></div>
+            {this.state.days.map((day, i) => {
+              return <div key={i}><p>{day}</p></div>
             })}
           </div>
           <div className='popupDate__date popupDate__date--1'>
-            {this.state.daysRow1.map(day => {
-              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            {this.state.daysRow1.map((day, i) => {
+              return <DayCalendar isChosen={this.props.dayDate === day[0] ? true : false} key={i} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
           <div className='popupDate__date popupDate__date--2'>
-            {this.state.daysRow2.map(day => {
-              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            {this.state.daysRow2.map((day, i) => {
+              return <DayCalendar isChosen={this.props.dayDate === day[0] ? true : false} key={i} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
           <div className='popupDate__date popupDate__date--3'>
-            {this.state.daysRow3.map(day => {
-              return <DayCalendar key={day[0]} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
+            {this.state.daysRow3.map((day, i) => {
+              return <DayCalendar isChosen={this.props.dayDate === day[0] ? true : false} key={i} text={day[0]} month={day[1]} onNewDate={this.onNewDate.bind(this)} />
             })}
           </div>
         </div>

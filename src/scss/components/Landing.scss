@@ -6,14 +6,50 @@
   text-align: center;
 }
 
+.landing__logo{
+  height: 70px;
+  margin-bottom: 30px;
+  img{
+    height: 100%;
+  }
+}
+
 .landingMainTitle {
   font-size: 48px;
   font-family: $anton;
 }
 
+.in-content{
+  position: absolute;
+  top:0;
+  width: 810px;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  align-items: center;
+  margin-right: 4vw;
+  .landingDate{
+    margin: 50px 0 20px 0;
+  }
+  .todayOlympicsWrapper{
+    width: 100%;
+    margin: 0;
+  }
+  .OneSport{
+    margin: 0;
+  }
+  .slider--wrapper{
+    margin: 0;
+  }
+  .slider{
+    margin-top: 20px;
+  }
+}
+
 .landingSubTitle {
   margin-top: 40px;
   font-size: 26px;
+  font-family: $roboto;
 }
 
 .landingDate{

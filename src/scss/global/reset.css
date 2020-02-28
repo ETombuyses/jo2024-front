@@ -48,4 +48,11 @@ table {
   border-spacing: 0;
 }
 
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 /*# sourceMappingURL=reset.css.map */

@@ -1,0 +1,31 @@
+.accessibiliteSingle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &.is-clicked .accessibiliteSingle__picture{
+    background-color: $rouge;
+  }
+}
+
+.accessibiliteSingle__picture{
+  height: 50px;
+  width: 50px;
+  background:#F1F1F1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px 10px 0px #9b9b9b;
+  transition: background-color 0.3s;
+  &:hover{
+    background-color: $rouge;
+  }
+
+  img{
+    height: 30px;
+  }
+}

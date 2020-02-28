@@ -7,14 +7,61 @@ class Sport extends Component {
     this.state = {
       idSport: this.props.id,
       adress: [],
-      arrondissement: undefined,
+      arrondissement: '',
+      handicapSensory: false,
+      handicapMobility: false,
+      level: false
     }
   }
 
   async componentDidMount() {
-    const response = await fetch(`http://127.0.0.1:8080/address/list/${this.state.idSport}/false/false/false`);
-    const json = await response.json();
-    this.setState({ adress: json })
+    if(this.state.arrondissement === ''){
+      const response = await fetch(`http://127.0.0.1:8080/addresses/${this.state.idSport}/${this.state.handicapMobility}/${this.state.handicapSensory}/${this.state.level}`);
+      const json = await response.json();
+      this.setState({ adress: json })
+    } else {
+      const response = await fetch(`http://127.0.0.1:8080/addresses/${this.state.idSport}/${this.state.handicapMobility}/${this.state.handicapSensory}/false/${this.state.arrondissement}`);
+      const json = await response.json();
+      this.setState({ adress: json })
+    }
+  }
+
+  componentDidUpdate(){
+    if(this.props.arrondissement !== this.state.arrondissement){
+      this.setState({
+        arrondissement: this.props.arrondissement
+      }, ()=>{
+        this.componentDidMount()
+      })
+    }
+    if(this.props.handicapMobility !== this.state.handicapMobility){
+      this.setState({
+        handicapMobility: this.props.handicapMobility
+      }, ()=>{
+        this.componentDidMount()
+      })
+    }
+    if(this.props.handicapSensory !== this.state.handicapSensory){
+      this.setState({
+        handicapSensory: this.props.handicapSensory
+      }, ()=>{
+        this.componentDidMount()
+      })
+    }
+    if(this.props.level !== this.state.level){
+      this.setState({
+        level: this.props.level
+      }, ()=>{
+        this.componentDidMount()
+      })
+    }
+    if(this.props.id !== this.state.idSport){
+      this.setState({
+        idSport: this.props.id
+      }, ()=>{
+        this.componentDidMount()
+      })
+    }
   }
 
   onClick(){
@@ -33,7 +80,7 @@ class Sport extends Component {
           <h5>{this.props.name}</h5>
         </div>
         <div className="sportSingle__gauge">
-          <div></div>
+          <div style={{width: this.state.adress.length + 'px'}}></div>
         </div>
         <div className="sportSingle__value">
           <p>{this.state.adress.length === undefined ? 0 : this.state.adress.length}</p>

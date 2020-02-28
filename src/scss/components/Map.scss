@@ -15,11 +15,102 @@
 }
 
 .map__content{
-  width: 800px;
+  width: 750px;
+  margin-right: 4vw;
+  margin-bottom: 30px;
 }
 
 .map__svg {
   width: 100%;
   height: auto;
   max-width: 800px;
+}
+
+.arrondissement{
+  cursor: pointer;
+  .forme{
+    transition: fill 0.3s;
+  }
+  &:hover .forme{
+    fill: $rouge;
+  }
+  &.is-clicked .forme{
+    fill: $rouge;
+  }
+}
+
+.map__captionContent{
+  margin: 100px 0 0 auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  h4{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+.map__captionDivs{
+  display: flex;
+  div{
+    width: 100px;
+    height: 20px;
+    border: 2px solid;
+    &:first-child{
+      border-radius: 30px 0 0 30px;
+      border-color: #fff;
+      background-color: rgba(255, 255, 255, 0.54);
+      position: relative;
+      &:before{
+        content: "0";
+        position: absolute;
+        top: -30px;
+        left: -5px;
+        font-size: 20px;
+      }
+      &:after{
+        content: "1";
+        position: absolute;
+        top: -30px;
+        right: -5px;
+        font-size: 20px;
+      }
+    }
+    &:nth-child(2){
+      border-color: #FFEF63;
+      background-color: rgba(255,239,99,0.22);
+    }
+    &:nth-child(3){
+      border-color: #FF8C05;
+      background-color: rgba(255,140,5,0.22);
+      position: relative;
+      &:before{
+        content: "10";
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        font-size: 20px;
+      }
+    }
+    &:last-child{
+      border-radius:0 30px 30px 0;
+      border-color: #A60101;
+      background-color: rgba(166,1,1,0.22);
+      position:relative;
+      &:before{
+        content: "20";
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        font-size: 20px;
+      }
+      &:after{
+        content: "+30";
+        position: absolute;
+        top: -30px;
+        right: -5px;
+        font-size: 20px;
+      }
+    }
+  }
 }

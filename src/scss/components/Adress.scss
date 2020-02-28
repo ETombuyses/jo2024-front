@@ -1,28 +1,81 @@
-.adress{
-  height: 830px;
+// .adress{
+//   height: 830px;
+// }
+
+.adress__header{
   padding: 0 30px;
-  overflow: scroll;
+  position: fixed;
+  width: 500px;
+  background: #F1F1F1;
+  border-radius: 20px 20px 0 0;
+}
+
+.adress__transition{
+  height: 205px;
 }
 
 .adress__back{
-  margin: 30px 0;
+  padding: 30px 0 10px 0;
   font-size: 18px;
   cursor: pointer;
+}
+
+.adress__arrondissement{
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.adress__pic{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #2A3BAF;
+  border-radius: 50%;
 }
 
 .adress__sport{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  padding-bottom: 20px;
   img{
     max-width: 50px;
     max-height: 50px;
-    margin-bottom: 10px;
   }
 }
 
 .adress__adress{
+  font-family: $roboto;
+  margin: 0 30px;
+  height: calc(94vh - 190px - 120px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #DDDDDD;
+    border-radius: 20px;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #000000; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
   >p{
     font-weight: bold;
     font-size: 18px;
@@ -31,7 +84,8 @@
 }
 
 .adressSingle{
-  margin: 20px 0;
+  margin: 20px 15px 20px 0;
+
   p{
     line-height: 22px;
   }
