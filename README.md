@@ -12,4 +12,4 @@ Nous avons choisi d'utiliser uniquement des svg pour la carte, car facilement mo
 Choix argumentés des librairies externes utilisées
 [5 pts]
 
-Nous avons pris la décision de ne pas utiliser de librairie car aucune ne correspondait a ce dont nous avions besoin.
+Nous avons pris la décision de ne pas utiliser de librairie car aucune ne correspondait à ce dont nous avions besoin.
