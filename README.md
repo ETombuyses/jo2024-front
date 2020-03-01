@@ -19,10 +19,6 @@ Nous avons pris la décision de ne pas utiliser de librairie car aucune ne corre
 Instructions :
 
 
-Pour lancer le site soyez sûr d'avoir cloné le repo jo-2024-symfo
+Voir les instructions d'installation dans le readme du repository jo-2024-symfo
 
-D'avoir lancer le serveur symfony avec php -S 127.0.0.1:8000 -t public
-
-D'avoir creer et importer la base de donnée comme expliquer dans le readme.md du repo "jo-2024-back"
-
-Enfin utilisez yarn start pour lancer le site.
+Pour lancer le site faites npm i puis yarn start
