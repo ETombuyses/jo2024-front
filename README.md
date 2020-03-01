@@ -15,6 +15,10 @@ Choix argumentés des librairies externes utilisées
 Nous avons pris la décision de ne pas utiliser de librairie car aucune ne correspondait à ce dont nous avions besoin.
 
 
+
+Instructions :
+
+
 Pour lancer le site soyez sûr d'avoir cloné le repo jo-2024-symfo et jo-2024-back
 
 D'avoir lancer le serveur symfony avec php -S 127.0.0.1:8000 -t public
