@@ -19,6 +19,6 @@ Nous avons pris la décision de ne pas utiliser de librairie car aucune ne corre
 Instructions :
 
 
-Voir les instructions d'installation dans le readme du repository jo-2024-symfo
+Voir les instructions d'installation dans le readme du repository jo-2024-symfo (https://github.com/ETombuyses/jo-2024-symfo)
 
 Pour lancer le site faites npm i puis yarn start
