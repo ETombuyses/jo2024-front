@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import calendrier from "../assets/icon/calendrier.svg";
-import OneSport from "./OneSport";
-import Calendar from './Calendar';
 import ChoseDate from './ChoseDate';
 
 
